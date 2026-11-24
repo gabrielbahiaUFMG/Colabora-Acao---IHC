@@ -51,7 +51,7 @@ button:focus-visible,textarea:focus-visible,input:focus-visible,select:focus-vis
 <script>
 const D={1:'Lavar e secar os pratos e talheres do almoço.',2:'Tirar as roupas do varal, dobrar e guardar.',3:'Levar o lixo da cozinha até a lixeira da rua.',4:'Fazer a cama e guardar roupas e brinquedos.',5:'Passeio de 20 minutos: um leva, o outro ajuda.'},AGE={Rafael:1,Bia:1.5},KIDS=['Rafael','Bia'],CH={livre:'Livre',res:'Reservada',conv:'Convite pendente',pend:'Aguardando confirmação',ok:'Aprovada',rec:'Recusada',cont:'Em contestação'};
 let me='Bia',tab='mural',sheet=null,mode='ativa',toast='',S,T,season=3,nc=null,cfg;
-function init(){T=[{id:1,n:'Lavar a louça',e:'🍽️',p:20,s:'pend',by:'Rafael'},{id:2,n:'Recolher as roupas do varal',e:'👕',p:15,s:'livre'},{id:3,n:'Levar o lixo para fora',e:'🗑️',p:10,s:'livre'},{id:4,n:'Arrumar o quarto',e:'🛏️',p:15,s:'livre'},{id:5,n:'Passear com a Mel',e:'🐕',p:40,s:'livre',dupla:1}];T.forEach(t=>t.d=D[t.id]);S={Rafael:60,Bia:45};cfg={dias:14,meta:150,premio:'Pizza em família',foto:0};nc=null;mode='ativa';season=3;sheet=null;tab='mural';toast=''}
+function init(){T=[{id:1,n:'Lavar a louça',e:'🍽️',p:20,s:'pend',by:'Rafael'},{id:2,n:'Recolher as roupas do varal',e:'👕',p:15,s:'livre'},{id:3,n:'Levar o lixo para fora',e:'🗑️',p:10,s:'livre'},{id:4,n:'Arrumar o quarto',e:'🛏️',p:15,s:'livre'},{id:5,n:'Passeio com a Mel',e:'🐕',p:40,s:'livre',dupla:1}];T.forEach(t=>t.d=D[t.id]);S={Rafael:60,Bia:45};cfg={dias:14,meta:150,premio:'Pizza em família',foto:0};nc=null;mode='ativa';season=3;sheet=null;tab='mural';toast=''}
 init();
 const R=()=>me==='Sandra'||me==='Carlos',A=()=>me==='Sandra',oth=()=>me==='Bia'?'Rafael':'Bia',pts=t=>Math.round(t.p*(R()?1:AGE[me]));
 const $=id=>document.getElementById(id);
